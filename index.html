@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div>
+            <!-- ========== list of animals from the javascript========== -->
+            <ul id="list"></ul>
+
+        </div>
+       
+    <script>
+        let cats=["Bob","Willy","Mini"];
+        let dogs=["Rusty","Wyatt"];
+        let animals=["Smoly","Miro",...cats,...dogs];
+        console.log(animals);
+        //create the list of animals
+        let list=document.getElementById("list");
+        for(let animal of animals){
+            let li=document.createElement("li");
+            li.textContent=animal;
+            list.appendChild(li);
+        }
+    </script>
+    </body>
+</html>

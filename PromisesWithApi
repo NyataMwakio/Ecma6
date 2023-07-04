@@ -1,0 +1,27 @@
+const SpacePeople=()=>{
+    return new Promise((resolve,reject)=>{
+        const api="http://api.open-notify.org/astros.json";
+        const request=new XMLHttpRequest();
+        request.withCredentials=true;
+        request.open("GET",api,true);
+        request.onload=()=>{
+            if(request.status===200){
+                resolve(JSON.parse(request.responseText));
+            }
+            else{
+                reject(Error(request.statusText));
+            }
+        }
+        request.onerror=()=>{
+            reject(Error("Error fetching data."));
+        }
+        request.send();  
+
+    });
+}
+
+SpacePeople().then((spaceData)=>{
+    console.log(spaceData);
+}).catch((err)=>{
+    console.log(err);
+});
