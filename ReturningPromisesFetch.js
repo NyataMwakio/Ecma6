@@ -39,3 +39,6 @@ getSpaceStationLocation().then((spacedata)=>{
 .catch((err)=>{
     console.log(err);
 })
+
+//add a remote git
+//git remote add origin 

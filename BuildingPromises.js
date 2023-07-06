@@ -14,6 +14,6 @@ const delay=(seconds)=>new Promise((resolve, reject)=>{
 delay(1).then(()=>console.log("1 second"));
 delay(3).then(()=>console.log("3 seconds"));
 delay(5).then(()=>console.log("5 seconds"));
-delay().then(()=>console.log("empty"));
+//delay().then(()=>console.log("empty"));
 //delay("5").then(()=>console.log("5 seconds"));
 //
